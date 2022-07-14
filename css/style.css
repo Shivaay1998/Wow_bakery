@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root{
+    --fourth-color: #fc9d03;
+    --main-color: #4e2501;
+    --text-color: #ADA7A7;
+    --fifth-color: rgba(31, 30, 30, 0.943);
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+header{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 100px;
+    width: 100px;
+}
+
+.logo span{
+    font-size: 2rem;
+    color: var(--fourth-color);
+}
+.navbar{
+    display: flex; 
+    column-gap: 5rem;
+}
+
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.navbar a:hover{
+    color: var(--fourth-color);
+}
+
+.constant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    gap: 10px;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+}
+.container img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.center p{
+    font-family: 'Tiro Bangla', serif;
+    color: white;
+    font-size: 3.3rem;
+    padding: 20px;
+}
+
+.center #btn{
+    background: none;
+    outline: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: color 1s;
+}
+.center #btn:hover{
+    color: black;
+}
+
+.center #btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 150%;
+    height: 100%;
+    background-color: #fff;
+    transform: scaleX(0) skewX(35deg);
+    transform-origin: left;
+    z-index: -1;
+    transition: transform 1s;
+}
+.center #btn:hover::before{
+    transform: scaleX(1) skewX(35deg);
+}
+
+@media (max-width:946px) {
+    header{
+        padding: 15px 4%;
+    }
+    .center p{
+        font-size: 2.5rem;
+        padding: 40px;
+    }
+}
+@media (max-width:786px) {
+    header{
+        padding: 18px 4%;
+    }
+    .center p{
+        font-size: 2.3rem;
+        padding: 40px;
+    }
+    .center #btn{
+        padding: 15px 30px;
+    }
+    .logo{
+        font-size: 1.8rem;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        height: 80px;
+        width: 80px;
+    }
+    
+    .logo span{
+        font-size: 1.8rem;
+        color: var(--fourth-color);
+    }
+    .navbar a{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:572px){
+    .center p{
+        font-size: 1.6rem;
+        padding: 40px;
+    }
+    .center #btn{
+        padding: 10px 20px;
+    }
+    .logo{
+        font-size: 1.5rem;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        height: 80px;
+        width: 80px;
+    }
+    
+    .logo span{
+        font-size: 1.5rem;
+        color: var(--fourth-color);
+    }
+    .navbar a{
+        font-size: 1.8rem;
+    }
+}
+@media (max-width:428px){
+    .center p{
+        font-size: 1.2rem;
+        padding: 40px;
+    }
+    .center #btn{
+        padding: 6px 12px;
+    }
+    .logo{
+        font-size: 1.2rem;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        height: 50px;
+        width: 50px;
+    }
+    
+    .logo span{
+        font-size: 1.2rem;
+        color: var(--fourth-color);
+    }
+    .navbar a{
+        font-size: 1.5rem;
+    }
+}

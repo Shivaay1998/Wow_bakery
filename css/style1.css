@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* font-family: 'Ubuntu', sans-serif; */
+}
+:root{
+    --main-color: #fc9d03;
+    --text-color: #ADA7A7;
+    --bg-color:#fff;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--main-color);
+    overflow: hidden;
+}
+
+.navbar{
+    min-height: 80px;
+    position: fixed;
+    background: var(--bg-color);
+    right: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 90px;
+    width: 90px;
+}
+
+.logo span{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.over-all{
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+}
+#img{
+    position: absolute;
+    top: 93px;
+    right: 339px;
+    height: 400px;
+    width: 250px;
+    z-index: 1000;
+}
+.register{
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+}
+
+
+.button{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.heading{
+    font-size: 1.5rem;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    padding: 0 40px;
+    border-bottom: 2px solid black; 
+    cursor: pointer;
+    background: none;
+}
+#btn1{
+    border-bottom: 2px solid var(--main-color);
+    color: var(--main-color );
+}
+
+.active #btn1{
+    border-bottom: 2px solid black;
+    color: black;
+}
+.active #btn2{
+    border-bottom: 2px solid var(--main-color);
+    color: var(--main-color );
+}
+.reg-left{
+    /* display: none; */
+    padding: 15px 35px;
+}
+.right{
+   display: none;
+   padding: 71px 56px;
+}
+
+.active .reg-left{
+   display: none;
+}
+.active .right{
+   display: block;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.input {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    position: relative;
+}
+
+.input label{
+    flex-basis: 28%;
+    color:rgb(1, 45, 44);
+    font-size: 18px;
+}
+
+.input input{
+    flex-basis: 68%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid rgb(10, 6, 6);
+    color: rgb(8, 4, 4);
+    font-size: 14px;
+}
+
+form button{
+    width: 100%;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 15px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+}   
+
+.right form .input{
+    padding: 10px;
+}
+
+.right form button{
+    margin-top: 20px;
+}
+@media (max-width: 970px){
+    #img{
+        left: -125px;
+        height: 300px;
+        width: 150px;
+    }
+    .reg-left{
+        padding: 14px 25px;
+    }
+    .right{
+        display: none;
+        padding: 60px 32px;
+     }
+     .input label{
+        font-size: 15px;
+    }
+    .input input{
+        font-size: 12px;
+    }
+    .heading{
+        font-size: 1.2rem;
+        padding: 0 30px;
+    }
+}
+@media (max-width: 586px) {
+    .reg-left{
+        padding: 14px 25px;
+    }
+    .right{
+        display: none;
+        padding: 64px 40px;
+     }
+    .input label{
+        font-size: 15px;
+    }
+    .input input{
+        font-size: 11px;
+    }
+    .heading{
+        font-size: 1rem;
+        padding: 0 28px;
+    }
+    .logo{
+        font-size: 1.8rem;
+        color: black;
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        height: 70px;
+        width: 70px;
+    }
+    
+    .logo span{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 460px){
+    .reg-left{
+        padding:10px 18px;
+    }
+    .right{
+        display: none;
+        padding: 60px 32px;
+     }
+     .input label{
+        font-size: 13px;
+    }
+    .input input{
+        font-size: 11px;
+    }
+    .heading{
+        font-size: 1rem;
+        padding: 0 26px;
+    }
+    .logo{
+        font-size: 1.6rem;
+        color: black;
+        display: flex;
+        align-items: center;
+    }
+    .logo img{
+        height: 65px;
+        width: 65px;
+    }
+    
+    .logo span{
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 380px){
+    .reg-left{
+        padding:10px 15px;
+    }
+    .right{
+        display: none;
+        padding: 55px 28px;
+     }
+     .input label{
+         font-size: 11px;
+     }
+     .input input{
+         font-size: 9px;
+     }
+     .heading{
+         font-size: 0.8rem;
+         padding: 0 25px;
+     }
+}

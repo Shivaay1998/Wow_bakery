@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"><img src="images/logo.png" alt="">Wow <span>Bakery</span>.</div>
+        </div>
+        <div class="over-all">
+
+            <img src="images/chef.png" alt="" id="img">
+            <div class="register">
+                <h1><span class="main">Register </span></h1>
+                <div class="button">
+                    <button class="heading" id="btn1">Signup</button>
+                    <h1>|</h1>
+                    <button class="heading" id="btn2">Login</button>
+                </div>
+                <div class="reg-left">
+                    <form action="">
+                        <div class="input">
+                            <label for="">Username: </label>
+                            <input type="text" name="username" id="username">
+                            <span id="name_error"></span>
+                        </div>
+                        <div class="input">
+                            <label for="">Email: </label>
+                            <input type="email" name="email" id="email">
+                            <span id="email_error"></span>
+                        </div>
+                        <div class="input">
+                            <label for="">Phone:</label>
+                            <input type="tel" name="phone" id="phone_no" onkeyup="validatephone()">
+                            <span id="phone_error"></span>
+                        </div>
+                        <div class="input">
+                            <label for="">Password: </label>
+                            <input type="password" name="password1" id="password1">
+                            <span class="pass_error"></span>
+                        </div>
+                        <div class="input">
+                            <label for="">Confirm Password: </label>
+                            <input type="password" name="password2" id="password2">
+                            <span class="pass_error2"></span>
+                        </div>
+                        <button id="submit" onclick="return validatesubmit()">Submit</button>
+                        <span id="submit_error"></span>
+                    </form>
+                </div>
+                <div class="right">
+                    <form action="">
+                        <div class="input">
+                            <label for="">Username: </label>
+                            <input type="text" name="username" id="username">
+                        </div>
+                        <div class="input">
+                            <label for="">Password: </label>
+                            <input type="password" name="password1" id="password1">
+                            <span class="pass_error"></span>
+                        </div>
+                        <button id="submit" onclick="return validatesubmit()">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        let btn = document.querySelector('.container')
+        let btn2 = document.querySelector('.heading')
+        let btn3 = document.querySelector('#btn1')
+        let btn4 = document.querySelector('#btn2')
+        let main = document.querySelector('.main')
+        btn4.addEventListener('click', () => {
+            btn.classList.toggle('active')
+            main.innerHTML = 'Login'
+
+        })
+        btn3.addEventListener('click', () => {
+            btn.classList.toggle('active')
+            main.innerHTML = 'Register'
+        })
+
+    </script>
+</body>
+
+</html>
